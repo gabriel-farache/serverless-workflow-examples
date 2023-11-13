@@ -1,0 +1,20 @@
+---
+id: BasicExample2
+version: '1.0'
+specVersion: 0.8.0
+name: "Basic Example"
+start: print
+functions:
+  - name: printMessage
+    type: custom
+    operation: sysout
+states:
+  - name: print
+    type: operation
+    actions:
+      - name: print
+        functionRef:
+          refName: printMessage
+          arguments:
+            message: Hello world!
+    end: true
