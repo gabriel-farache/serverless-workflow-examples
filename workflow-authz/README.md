@@ -76,8 +76,8 @@ curl -X POST -H 'Content-Type:application/json' -H 'Accept:application/json' -d 
 
 By trying to access with `alice` token, the execution request will be accepted. With `alice2` token you will have a 403 error and without any token a 401 error.
 
-If a path is not protected in keycloak, thanks to the following properties, an unauthenticated user will be denied access (401) and an authenticated one a forbidden (403) error.
+If a path is not protected in keycloak, thanks to the following properties, with the prod profile, an unauthenticated user will be denied access (401) and an authenticated one a forbidden (403) error.
 ```
-quarkus.http.auth.permission.authenticated1.paths=/*
-quarkus.http.auth.permission.authenticated1.policy=authenticated
+%prod.quarkus.http.auth.permission.authenticated1.paths=/*
+%prod.quarkus.http.auth.permission.authenticated1.policy=authenticated
 ```
