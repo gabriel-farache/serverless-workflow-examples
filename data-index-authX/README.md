@@ -55,7 +55,7 @@ echo "$access_token"
 ### Deploy
 To restrict network access to the DataIndex service only to specific pods, run the folowing:
 ```bash
-kubect apply -f dataindex-networkpolicies.yaml
+kubectl apply -f dataindex-networkpolicies.yaml
 ```
 
 ### Test
