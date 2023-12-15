@@ -13,7 +13,7 @@ minikube start --cpus 4 --memory 10240 --addons registry --addons metrics-server
 ## Deploy PostgreSQL, Data Index, Jobs Service
 
 ```shell
-kustomize build kustomize/base/ | kubectl apply -f -
+kustomize build base/ | kubectl apply -f -
 ```
 You may have the following error:
 ```shell
